@@ -1,27 +1,17 @@
 package com.example.event;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.ColorSpace;
 import android.graphics.Paint;
-import android.graphics.RectF;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-public class Showgames extends AppCompatActivity {
+public class viewleaderboard extends AppCompatActivity {
     Database_Game_Table mydb;
     RecyclerView recyclerView;
 
@@ -30,10 +20,11 @@ public class Showgames extends AppCompatActivity {
     GameAdapter gameAdapter;
     private Paint p = new Paint();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_showgames);
+        setContentView(R.layout.activity_viewleaderboard);
         mydb = new Database_Game_Table(this);
         recyclerView=findViewById(R.id.recyclerview);
         RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(this);
@@ -53,13 +44,10 @@ public class Showgames extends AppCompatActivity {
                 }while (data.moveToNext());
             }
         }
-         gameAdapter=new GameAdapter(this,a1,0);
+        gameAdapter=new GameAdapter(this,a1,3);
         recyclerView.setAdapter(gameAdapter);
 
 
 
-
-
     }
-
 }

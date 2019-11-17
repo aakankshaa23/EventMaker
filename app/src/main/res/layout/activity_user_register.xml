@@ -3,12 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="#22333b"
+    android:background="#24333b"
     android:layout_height="match_parent"
-    tools:context=".Showgames">
+    android:orientation="vertical"
+    tools:context=".UserRegister">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER FOR GAME"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:textSize="30dp"/>
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
@@ -35,10 +46,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
+        android:layout_height="match_parent"
         android:id="@+id/recyclerview"
-        android:layout_height="match_parent">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
+        android:layout_marginTop="10dp"/>
 </LinearLayout>
